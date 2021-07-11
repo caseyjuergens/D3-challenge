@@ -29,11 +29,12 @@
         .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 //import data
-d3.csv("./data/data.csv").then(function(data) {
+d3.csv("./assets/data/data.csv").then(function(data) {
     //parse data
     data.forEach(function(data){
         data.poverty = +data.poverty;
         data.healthcare = +data.healthcare;
+        console.log(data);
     });
 
     //create scale functions
